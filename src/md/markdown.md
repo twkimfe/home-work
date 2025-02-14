@@ -3,7 +3,7 @@
 ![markdown image](/src/assets/images/markdown.png "markdown")
 
 #### 작성자: 김태우
-[html 버전](/src/markdown.html "markdown html version")
+
 <hr>
 
 # 1. 마크다운 개요
@@ -37,16 +37,45 @@ github 유저는 README.md를 통해 본인이 개발한 프로젝트의 설치�
 - 고급 기능의 제한, 목차 자동 생성, 각주, 상호 참조 등 학술 문서에 필요한 고급 기능을 구현하기 위해 다른 확장 프로그램이나 도구가 필요하다
 
 > ## 1.3. 마크다운 문법
+
 마크다운 문법(Markdown Syntax)은 텍스트를 구조화하고 서식을 지정하는 규칙의 집합으로, 제목(`#`), 강조(`*`, `_`), 목록(`-`, `1.`) 등의 기본 요소들로 구성되어 있습니다. 특징은 배우기 쉽고, 읽기 쉬우며, 다양한 플랫폼에서 지원된다는 것입니다.<br>
 특히 웹 문서 작성에 최적화되어 있어, 코드 블록(```)이나 링크(`[]()`) 같은 요소들을 간단히 표현할 수 있고, GitHub 등의 플랫폼에서는 표나 체크박스 같은 확장 문법도 지원합니다.<br>
 이러한 마크다운 문법은 특수 기호와 문자만으로도 복잡한 문서 구조를 표현할 수 있어, 개발자들의 문서화 작업이나 블로그 작성 등에 널리 활용되고 있습니다.<br>
 아래 링크는 가장 기초적인 마크다운 명령어입니다.<br>
-## [마크다운 명령어](https://www.markdownguide.org/cheat-sheet/ "markdown cheat sheet")
+
+### [마크다운 명령어](https://www.markdownguide.org/cheat-sheet/ "markdown cheat sheet")
+
+<hr>
 
 # 2. GitHub Flavored Markdown
 
 > ## 2.1. GFM (GitHub Flavored Markdown)이란?
 
-> ## 2.2. GFM 사용법
+GitHub Flavored Markdown(GFM)은 GitHub에서 확장한 마크다운 문법으로, 기본 마크다운의 기능을 포함하면서 개발자들을 위한 추가적인 기능을 제공합니다.<br>
+해당 문법은 github에서 시작됐지만, 현재는 많은 플랫폼과 도구에서 이 문법을 채택하고, 지원하고 있습니다. 하지만 지원 범위는 플랫폼마다 다른 부분이 존재합니다.<br>
+완전 지원하는 플랫폼<br>
 
-> ## 2.3. GFM 문법
+- Gitlab
+- Bitbucket
+- Discord
+- Notion
+- Visual Studio Code<br>
+
+부분 지원하는 플랫폼<br>
+
+- Reddit
+- Slack
+- Trello<br>
+
+그 외 github 전용 기능입니다.
+
+- 이슈/PR 참조 (#123)
+- github 유저 멘션 (@username)
+- 커밋 해시 자동 링크
+- github 전용 이모지 코드<br>
+
+위 같이 GFM 문법은 markdown 문법의 핵심 기능을 가져오고, 대부분의 현대 마크다운 에디터와 플랫폼에서 사용할 수 있지만, 프로젝트 관리 관련 기능은 github나 유사 플랫폼에서만 작동이 됩니다.
+
+> ## 2.2. GFM 문법
+
+주요 문법은 다음과 같습니다.

@@ -78,4 +78,53 @@ GitHub Flavored Markdown(GFM)은 GitHub에서 확장한 마크다운 문법으�
 
 > ## 2.2. GFM 문법
 
-주요 문법은 다음과 같습니다.
+주로 쓰는 문법은 다음과 같습니다.
+
+- 코드 블록 구문 강조
+  특정 프로그래밍 언어를 지정하면 해당 언어에 맞는 구문 강조가 자동으로 적용됩니다.
+
+예시<br>
+
+```JavaScript
+const Hello = "Hello, World!"
+console.log(Hello)
+```
+
+- 테이블 생성
+  |와 -를 사용해 표를 만들고, :---(좌측 정렬), :---:(중앙 정렬), ---:(우측 정렬)로 정렬도 가능합니다.
+
+예시<br>
+| 이름 | 역할 | 기여도 |
+|-----|------|--------|
+| 김철수 | 개발 | 50% |
+| 이영희 | 디자인 | 50% |
+
+- 작업 체크리스트
+
+'- [ ]'는 미완료, '- [x]'는 완료된 작업을 표시합니다.
+
+예시<br>
+
+- [x] 기획안 작성
+- [x] 디자인 시안 제작
+- [ ] 개발 완료
+- [ ] 테스트 진행
+
+- 취소선
+  ~~텍스트~~ 형식으로 취소선을 적용할 수 있습니다.
+
+예시<br>
+~~이 기능은 더 이상 지원되지 않습니다.~~
+
+- 자동 링크
+
+URL을 그대로 입력하면 자동으로 클릭 가능한 링크로 변환됩니다. <>로 감싸서 사용할 수도 있습니다.
+
+예시<br>
+https://github.com
+
+아래 링르로 더 많음 GFM 구문을 알 수 있습니다.
+
+### [GFM 자료 1](https://docs.github.com/ko/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax "github docs")
+
+### [GFM 자료 2](https://github.github.com/github-flavored-markdown/sample_content.html "GitHub Flavored Markdown")

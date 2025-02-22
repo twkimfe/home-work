@@ -2,7 +2,7 @@
 
 # 멋쟁이 사자처럼 프론트엔드 13기 부트캠프 3주차 회고
 
-![likelion bootcamp image](https://www.brandb.net/_next/image?url=https%3A%2F%2Fapi.brandb.net%2Fapi%2Fv2%2Fcommon%2Fimage%2F%3FfileId%3D3011&w=1920&q=75"likelion")
+![likelion bootcamp image](./src/assets/images/likelion.png "likelion")
 
 #### 작성자: 김태우
 

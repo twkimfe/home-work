@@ -1,9 +1,49 @@
 /* 여기에 스타일을 구현해 주세요 */
-
 @import "src/common/mini-reset.css";
 
-.avatars {
-  width: 596px;
-  height: 395px;
+body {
+  margin: 0;
+  padding: 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f6f8;
+}
+
+.avatars_container {
+  width: 420px;
+  height: 225px;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 2px;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar_content {
+  display: inline-flex;
+  width: 396px;
+  height: 195px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.avatar_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+avatar_img {
+  padding: 10px;
+}
+img {
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
 }

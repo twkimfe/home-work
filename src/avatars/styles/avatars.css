@@ -1,0 +1,9 @@
+/* 여기에 스타일을 구현해 주세요 */
+
+@import "src/common/mini-reset.css";
+
+.avatars {
+  width: 596px;
+  height: 395px;
+  display: flex;
+}

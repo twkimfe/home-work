@@ -1,6 +1,6 @@
 # 마크다운 조사 과제
 
-![markdown image](./src/assets/images/markdown.png "markdown")
+![markdown image](/home-work/src/assets/images/markdown.png "markdown")
 
 #### 작성자: 김태우
 

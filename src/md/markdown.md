@@ -1,6 +1,6 @@
 # 마크다운 조사 과제
 
-![likelion bootcamp image](/home-work/src/assets/images/likelion.jpeg "likelion")
+![likelion bootcamp image](/home-work/src/assets/images/markdown.png "likelion")
 
 #### 작성자: 김태우
 

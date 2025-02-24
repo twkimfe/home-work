@@ -48,6 +48,7 @@ body {
 
   span {
     margin-right: 1rem;
+    white-space: nowrap;
   }
 
   li {
@@ -58,4 +59,10 @@ body {
     display: flex;
     gap: 1rem;
   }
+}
+
+.homework-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }

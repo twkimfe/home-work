@@ -1,0 +1,52 @@
+<!-- HTML 마크업을 작성해 주세요 -->
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>네이버 로그인</title>
+    <link rel="stylesheet" href="/src/login/styles/login.css" />
+  </head>
+  <body>
+    <figure>
+      <a href="https://www.naver.com">
+        <img src="/src/assets/images/naverLogo.svg" alt="naverLogo"
+      /></a>
+      <figurecaption class="sr-only">네이버 로고, 홈페이지 이동</figurecaption>
+    </figure>
+    <section class="login-container">
+      <div class="id-input">
+        <input type="email" placeholder="아이디(이메일)" required />
+        <span class="sr-only">아이디 입력창, 이메일 형식 필수</span>
+      </div>
+
+      <div class="password-input">
+        <input type="password" placeholder="비밀번호" required />
+        <span class="sr-only">비밀번호 입력창, 최소 10자리 이상</span>
+      </div>
+
+      <div class="login-submit-btn">
+        <button type="submit" href="/">로그인</button>
+        <span class="sr-only">로그인 버튼</span>
+      </div>
+
+      <div class="login-status-checkbox">
+        <label
+          ><img
+            src="/src/assets/images/unchecked.svg"
+            alt="체크박스, 체크 안 한 상태"
+          />
+          <p class="sr-only">로그인 상태 유지 체크박스, 체크 안 함</p>
+          로그인 상태 유지</label
+        >
+      </div>
+      <div class="IP-secure">
+        <label>IP 보안</label>
+        <label for="" class="IP-secure-toggle"
+          >ON
+          <p class="sr-only">IP보안 상태, 현재 활성됨, 클릭 시 비활성</p>
+        </label>
+      </div>
+    </section>
+  </body>
+</html>

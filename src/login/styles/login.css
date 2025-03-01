@@ -1,11 +1,13 @@
 /* CSS를 활용하여 레이아웃 및 스타일링을 완성해주세요 */
-@import "/src/common/best-reset.css";
-@import "/src/common/a11y.css";
+@import "../../../src/common/best-reset.css";
+@import "../../../src/common/a11y.css";
 
 /* 전역변수 */
 :root {
   --font-default-16: 1rem;
   --font-default-color: #121212;
+  --font-error-12: 0.75rem;
+  --font-error-color: #ff1414;
 
   --focus-style-default-color: #24388d;
   --focus-border-default-color: #03cf5d;
@@ -94,8 +96,15 @@ figure {
   padding: 0 var(--normal-gap20);
   flex: 1;
 
+  &:has(#userId:focus) .error-message,
+  &:has(#userPassword:focus) .error-message {
+    display: block;
+  }
+
   .input {
     display: flex;
+    flex-direction: column;
+
     input {
       width: 100%;
       height: 2.8125rem;
@@ -108,6 +117,16 @@ figure {
         border: 0.0625rem solid var(--focus-border-default-color);
         background-color: var(--focus-bg-color);
       }
+
+      &:focus + .error-message {
+        display: block;
+      }
+    }
+    .error-message {
+      font-size: var(--font-error-12);
+      color: var(--font-error-color);
+      margin: 10px 0 0 10px;
+      display: none;
     }
   }
   .loginBtn {
@@ -130,6 +149,7 @@ figure {
     /* desktop UI */
     @media (min-width: 48rem) {
       justify-content: space-between;
+      width: 100%;
     }
 
     .ipSecure-checkbox {
@@ -140,18 +160,14 @@ figure {
         display: flex;
         align-items: center;
       }
-
-      .ipSecure-wrapper {
-        display: flex;
-        align-items: center;
-        gap: 50px;
-      }
     }
 
     .login-status-checkbox {
       display: flex;
       align-items: center;
       gap: 0.3125rem;
+      position: relative;
+
       input[type="checkbox"] {
         appearance: none;
         width: 1.5rem;
@@ -163,6 +179,15 @@ figure {
           background: url("../../../src/assets/images/checked.svg");
           background-size: cover;
         }
+      }
+
+      /* 체크 상태에 따른 sr-only 콘텐츠 변경 */
+      .login-status .sr-only::before {
+        content: "로그인 상태 유지 unchecked";
+      }
+
+      #loginStatus:checked + .login-status .sr-only::before {
+        content: "로그인 상태 유지 checked";
       }
     }
 
@@ -190,6 +215,9 @@ figure {
       cursor: pointer;
       user-select: none;
       color: var(--toggle-font-color);
+
+      width: 2.5rem;
+      text-align: right;
     }
 
     .toggle-status::after {

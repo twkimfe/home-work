@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>네이버 로그인</title>
-    <link rel="stylesheet" href="/src/login/styles/login.css" />
+    <link rel="stylesheet" href="../../src/login/styles/login.css" />
   </head>
 
   <body>
@@ -13,7 +13,7 @@
       <!-- logo -->
       <figure>
         <a class="naver-logo" href="https://www.naver.com">
-          <img src="/src/assets/images/naverLogo.svg" alt="naverLogo"
+          <img src="../../src/assets/images/naverLogo.svg" alt="naverLogo"
         /></a>
         <figurecaption class="sr-only"
           >네이버 로고, 홈페이지 이동</figurecaption
@@ -36,11 +36,15 @@
                 placeholder="아이디(이메일)"
                 required
               />
+              <div class="error-message">
+                아이디는 이메일 형식으로 입력해 주세요.
+              </div>
             </div>
             <div class="input">
               <label for="userPassword" class="sr-only"
                 >비밀번호 입력창, 최소 10자리 이상</label
               >
+
               <input
                 type="password"
                 id="userPassword"
@@ -49,20 +53,20 @@
                 minlength="10"
                 required
               />
+              <div class="error-message">
+                비밀번호는 10자리 이상 입력해 주세요.
+              </div>
             </div>
             <button type="submit" class="loginBtn" href="/">
               로그인<span class="sr-only">로그인 버튼</span>
             </button>
             <div class="login-option-wrapper">
               <div class="login-status-checkbox">
-                <label for="loginStatus" class="sr-only">
-                  로그인 상태 유지 체크박스</label
+                <input type="checkbox" name="loginStatus" id="loginStatus" />
+                <label for="loginStatus" class="login-status">
+                  <span class="sr-only">로그인 상태 유지 체크박스</span></label
                 >
-                <input
-                  type="checkbox"
-                  name="loginStatus"
-                  id="loginStatus"
-                /><span class="login-status">로그인 상태유지</span>
+                <span class="login-status">로그인 상태유지</span>
               </div>
               <div class="ipSecure-checkbox">
                 <a

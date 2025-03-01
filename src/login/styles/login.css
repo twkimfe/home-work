@@ -1,3 +1,141 @@
 /* CSS를 활용하여 레이아웃 및 스타일링을 완성해주세요 */
 @import "/src/common/best-reset.css";
 @import "/src/common/a11y.css";
+
+/* 전역변수 */
+:root {
+  --font-default-16: 1rem;
+  --font-default-color: #121212;
+
+  --focus-style-default-color: #24388d;
+  --focus-border-default-color: #03cf5d;
+  --focus-bg-default-color: #e9f0fd;
+
+  --login-btn-font-color: #fff;
+  --login-btn-bg-color: #03cf5d;
+
+  --spacing-10: 0.625rem;
+  --spacing-20: 1.25rem;
+  --spacing-45: 2.8125rem;
+
+  --ipToggle-font-color: #121212;
+}
+
+/* 초기화 */
+body * {
+  color: var(--font-default-color);
+  text-decoration: none;
+}
+fieldset {
+  border: 0;
+  width: 100%;
+}
+
+.loginBtn {
+  --login-btn-spacing-20: var(--spacing-20);
+  --login-btn-width-45: var(--spacing-45);
+}
+
+.ipSecure-text-toggle-hidden {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* mobile UI */
+
+figure {
+  width: 165px;
+  margin-bottom: 45px;
+}
+
+.form-wrapper {
+  --normal-gap10: var(--spacing-10);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--normal-gap10);
+}
+
+.login-container {
+  --normal-gap20: var(--spacing-20);
+
+  display: flex;
+  width: 100%;
+  padding: 0 var(--normal-gap20);
+  flex: 1;
+
+  .input {
+    display: flex;
+    input {
+      width: 100%;
+      height: 3rem;
+      padding: 14px;
+      outline: none;
+      border: 1px solid #dadada;
+      color: #999;
+
+      &:focus {
+        border: 1px solid var(--focus-border-default-color);
+        background-color: var(--focus-bg-default-color);
+      }
+    }
+  }
+  .loginBtn {
+    margin-top: var(--spacing-10);
+    height: var(--login-btn-width-45);
+    border: none;
+    background-color: var(--login-btn-bg-color);
+    color: var(--login-btn-font-color);
+  }
+
+  .login-option-wrapper {
+    display: flex;
+    justify-content: end;
+
+    @media (min-width: 768px) {
+      justify-content: space-between;
+    }
+
+    .IP-secure-checkbox {
+      display: none;
+
+      @media (min-width: 768px) {
+        display: flex;
+      }
+    }
+
+    .login-status-checkbox {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      input[type="checkbox"] {
+        appearance: none;
+        width: 24px;
+        height: 24px;
+        background: url("../../../src/assets/images/unchecked.svg");
+        background-size: cover;
+
+        &:checked {
+          background: url("../../../src/assets/images/checked.svg");
+          background-size: cover;
+        }
+      }
+    }
+  }
+}

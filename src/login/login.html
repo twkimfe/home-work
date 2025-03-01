@@ -7,46 +7,90 @@
     <title>네이버 로그인</title>
     <link rel="stylesheet" href="/src/login/styles/login.css" />
   </head>
+
   <body>
-    <figure>
-      <a href="https://www.naver.com">
-        <img src="/src/assets/images/naverLogo.svg" alt="naverLogo"
-      /></a>
-      <figurecaption class="sr-only">네이버 로고, 홈페이지 이동</figurecaption>
-    </figure>
-    <section class="login-container">
-      <div class="id-input">
-        <input type="email" placeholder="아이디(이메일)" required />
-        <span class="sr-only">아이디 입력창, 이메일 형식 필수</span>
-      </div>
 
-      <div class="password-input">
-        <input type="password" placeholder="비밀번호" required />
-        <span class="sr-only">비밀번호 입력창, 최소 10자리 이상</span>
-      </div>
+    <div class="container">
 
-      <div class="login-submit-btn">
-        <button type="submit" href="/">로그인</button>
-        <span class="sr-only">로그인 버튼</span>
-      </div>
-
-      <div class="login-status-checkbox">
-        <label
-          ><img
-            src="/src/assets/images/unchecked.svg"
-            alt="체크박스, 체크 안 한 상태"
-          />
-          <p class="sr-only">로그인 상태 유지 체크박스, 체크 안 함</p>
-          로그인 상태 유지</label
+      <!-- logo -->
+      <figure>
+        <a href="https://www.naver.com">
+          <img src="/src/assets/images/naverLogo.svg" alt="naverLogo"
+        /></a>
+        <figurecaption class="sr-only"
+          >네이버 로고, 홈페이지 이동</figurecaption
         >
-      </div>
-      <div class="IP-secure">
-        <label>IP 보안</label>
-        <label for="" class="IP-secure-toggle"
-          >ON
-          <p class="sr-only">IP보안 상태, 현재 활성됨, 클릭 시 비활성</p>
-        </label>
-      </div>
-    </section>
+      </figure>
+
+      <!-- login form -->
+      <form action="/" class="login-container">
+        <fieldset>
+          <legend class="sr-only">로그인 창</legend>
+          <div class="form-wrapper">
+            <div class="input">
+              <label for="userId" class="sr-only"
+                >아이디 입력창, 이메일 형식 필수</label
+              >
+              <input
+                type="email"
+                id="userId"
+                name="userId"
+                placeholder="아이디(이메일)"
+                required
+              />
+            </div>
+            <div class="input">
+              <label for="userPassword" class="sr-only"
+                >비밀번호 입력창, 최소 10자리 이상</label
+              >
+              <input
+                type="password"
+                id="userPassword"
+                name="userPassword"
+                placeholder="비밀번호"
+                required
+              />
+            </div>
+            <button type="submit" class="loginBtn" href="/">
+              로그인<span class="sr-only">로그인 버튼</span>
+            </button>
+            <div class="login-option-wrapper">
+              <div class="login-status-checkbox">
+                <label for="loginStatus" class="sr-only">
+                  로그인 상태 유지 체크박스</label
+                >
+                <input
+                  type="checkbox"
+                  name="loginStatus"
+                  id="loginStatus"
+                /><span class="login-status">로그인 상태유지</span>
+              </div>
+              <div class="IP-secure-checkbox">
+                <label for="ipSecure" class="sr-only toggle-label"
+                  >IP보안 상태, 현재 활성, 클릭 시 비활성</label
+                >
+                <a
+                  href="../../src/login/pages/ip_security.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="ipSecure"
+                  >IP 보안<span class="sr-only">ip보안 상세페이지 </span>
+                </a>
+                <div class="ipSecure-wrapper">
+                  <input
+                    type="checkbox"
+                    name="ipSecure"
+                    id="ipSecure"
+                    class="ipSecure-text-toggle-hidden"
+                  />
+                  <span class="sr-only">ip보안 유지 상태 OFF </span>
+                  <label for="ipSecure" class="toggle-status">OFF</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
   </body>
 </html>

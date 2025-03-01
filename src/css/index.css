@@ -22,7 +22,7 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   object-fit: cover;
   border: 5px solid #f0f0f0;
 }
@@ -31,19 +31,29 @@ body {
   font-size: 1.5rem;
   font-weight: bold;
   color: #333;
-  margin-bottom: 0.5rem;
+  margin: 0 0 1rem 0;
 }
 
 .bio {
   color: #666;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.link-intro {
+  margin: 4px 0 1.3rem 0;
+}
+
+.html-css {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
 }
 
 .homework-links {
   list-style-type: none;
   padding: 0;
-  margin: 0 auto;
+  margin: 10px auto;
   width: fit-content;
 
   span {

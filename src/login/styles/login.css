@@ -9,20 +9,23 @@
 
   --focus-style-default-color: #24388d;
   --focus-border-default-color: #03cf5d;
-  --focus-bg-default-color: #e9f0fd;
-
-  --login-btn-font-color: #fff;
-  --login-btn-bg-color: #03cf5d;
+  --focus-bg-color: #e9f0fd;
 
   --spacing-10: 0.625rem;
   --spacing-20: 1.25rem;
   --spacing-45: 2.8125rem;
 
-  --ipToggle-font-color: #121212;
+  --login-btn-font-color: #fff;
+  --login-btn-bg-color: #03cf5d;
+
+  --toggle-font-color: #999;
+  --toggle-checked-font-color: #03cf5d;
 }
 
 /* 초기화 */
-body * {
+body *,
+body *::before,
+body *::after {
   color: var(--font-default-color);
   text-decoration: none;
 }
@@ -31,17 +34,7 @@ fieldset {
   width: 100%;
 }
 
-.loginBtn {
-  --login-btn-spacing-20: var(--spacing-20);
-  --login-btn-width-45: var(--spacing-45);
-}
-
-.ipSecure-text-toggle-hidden {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
+/* UI 구현 */
 body {
   height: 100vh;
   display: flex;
@@ -54,14 +47,27 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    *:focus {
+      box-shadow: 0 0 0.1875rem var(--focus-style-default-color);
+    }
   }
 }
 
 /* mobile UI */
 
 figure {
-  width: 165px;
-  margin-bottom: 45px;
+  width: 14.375rem;
+  margin-bottom: 2.8125rem;
+
+  & .naver-logo {
+    display: block;
+    height: 2.75rem;
+
+    & .naver-logo img {
+      height: 100%;
+    }
+  }
 }
 
 .form-wrapper {
@@ -70,6 +76,14 @@ figure {
   display: flex;
   flex-direction: column;
   gap: var(--normal-gap10);
+  width: 100%;
+
+  /* desktop UI */
+  @media (min-width: 48rem) {
+    width: 31.25rem;
+    padding: 0 var(--normal-gap20);
+    margin: 0 auto;
+  }
 }
 
 .login-container {
@@ -84,38 +98,45 @@ figure {
     display: flex;
     input {
       width: 100%;
-      height: 3rem;
-      padding: 14px;
+      height: 2.8125rem;
+      padding: 0.875rem;
       outline: none;
-      border: 1px solid #dadada;
-      color: #999;
+      border: 0.0625rem solid #dadada;
+      background-color: #fff;
 
       &:focus {
-        border: 1px solid var(--focus-border-default-color);
-        background-color: var(--focus-bg-default-color);
+        border: 0.0625rem solid var(--focus-border-default-color);
+        background-color: var(--focus-bg-color);
       }
     }
   }
   .loginBtn {
-    margin-top: var(--spacing-10);
+    --login-btn-spacing-20: var(--spacing-20);
+    --login-btn-width-45: var(--spacing-45);
+    --login-btn-font-16: var(--font-default-16);
+
+    font-size: var(--login-btn-font-16);
     height: var(--login-btn-width-45);
-    border: none;
-    background-color: var(--login-btn-bg-color);
     color: var(--login-btn-font-color);
+    background-color: var(--login-btn-bg-color);
+    margin-top: var(--login-btn-spacing-20);
+    border: none;
   }
 
   .login-option-wrapper {
     display: flex;
     justify-content: end;
 
-    @media (min-width: 768px) {
+    /* desktop UI */
+    @media (min-width: 48rem) {
       justify-content: space-between;
     }
 
-    .IP-secure-checkbox {
+    .ipSecure-checkbox {
       display: none;
 
-      @media (min-width: 768px) {
+      /* desktop UI */
+      @media (min-width: 48rem) {
         display: flex;
       }
     }
@@ -123,11 +144,11 @@ figure {
     .login-status-checkbox {
       display: flex;
       align-items: center;
-      gap: 5px;
+      gap: 0.3125rem;
       input[type="checkbox"] {
         appearance: none;
-        width: 24px;
-        height: 24px;
+        width: 1.5rem;
+        height: 1.5rem;
         background: url("../../../src/assets/images/unchecked.svg");
         background-size: cover;
 
@@ -135,6 +156,54 @@ figure {
           background: url("../../../src/assets/images/checked.svg");
           background-size: cover;
         }
+      }
+    }
+
+    a .ipSecure {
+      --ipSecure-font-16: var(--font-default-16);
+      --ipSecture-fontColor: var(--font-default-color);
+      font-size: var(--ipSecure-font-16);
+      color: var(--ipSecture-fontColor);
+    }
+
+    .ipSecure-text-toggle-hidden {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .toggle-status {
+      --toggle-status-color: var(--toggle-font-color);
+      --toggle-status-checked-color: var(--toggle-checked-font-color);
+
+      color: var(--toggle-status-color);
+
+      .toggle-status::after {
+        content: "OFF";
+        font-weight: bold;
+      }
+
+      #ipSecure:checked + .toggle-status::after {
+        content: "ON";
+        font-weight: bold;
+        color: var(--toggle-status-checked-color);
+      }
+
+      .sr-only-container::before {
+        position: absolute;
+        width: 0.0625rem;
+        height: 0.0625rem;
+        padding: 0;
+        margin: -0.0625rem;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+        border: 0;
+        content: "ip보안 유지 상태 OFF";
+      }
+
+      #ipSecure:checked + .sr-only-container::before {
+        content: "ip보안 유지 상태 ON";
       }
     }
   }

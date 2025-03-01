@@ -14,5 +14,5 @@
 
 ## 3차 과제 - 로그인
 
-- [아바타 과제](./src/login/login.html)
+- [로그인 과제](./src/login/login.html)
 - [회고](./src/login/login.md)

@@ -9,12 +9,10 @@
   </head>
 
   <body>
-
     <div class="container">
-
       <!-- logo -->
       <figure>
-        <a href="https://www.naver.com">
+        <a class="naver-logo" href="https://www.naver.com">
           <img src="/src/assets/images/naverLogo.svg" alt="naverLogo"
         /></a>
         <figurecaption class="sr-only"
@@ -65,10 +63,7 @@
                   id="loginStatus"
                 /><span class="login-status">로그인 상태유지</span>
               </div>
-              <div class="IP-secure-checkbox">
-                <label for="ipSecure" class="sr-only toggle-label"
-                  >IP보안 상태, 현재 활성, 클릭 시 비활성</label
-                >
+              <div class="ipSecure-checkbox">
                 <a
                   href="../../src/login/pages/ip_security.html"
                   target="_blank"
@@ -83,10 +78,12 @@
                     id="ipSecure"
                     class="ipSecure-text-toggle-hidden"
                   />
-                  <span class="sr-only">ip보안 유지 상태 OFF </span>
-                  <label for="ipSecure" class="toggle-status">OFF</label>
+                  <label for="ipSecure" class="toggle-status sr-only-container"
+                    >OFF</label
+                  >
                 </div>
               </div>
+              
             </div>
           </div>
         </fieldset>

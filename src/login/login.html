@@ -46,6 +46,7 @@
                 id="userPassword"
                 name="userPassword"
                 placeholder="비밀번호"
+                minlength="10"
                 required
               />
             </div>
@@ -72,18 +73,12 @@
                   >IP 보안<span class="sr-only">ip보안 상세페이지 </span>
                 </a>
                 <div class="ipSecure-wrapper">
-                  <input
-                    type="checkbox"
-                    name="ipSecure"
-                    id="ipSecure"
-                    class="ipSecure-text-toggle-hidden"
-                  />
-                  <label for="ipSecure" class="toggle-status sr-only-container"
-                    >OFF</label
+                  <input type="checkbox" name="ipSecure" id="ipSecure" />
+                  <label for="ipSecure" class="toggle-status"
+                    ><span class="sr-only">ip보안 유지 상태</span></label
                   >
                 </div>
               </div>
-              
             </div>
           </div>
         </fieldset>

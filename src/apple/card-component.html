@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -6,11 +6,85 @@
     <title>Apple Card Component</title>
     <link rel="icon" href="./favicon/apple-favicon.svg" />
     <link rel="apple-touch-icon" href="./favicon/apple-favicon.svg" />
-    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles/card-component.css" />
+    <link
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/card-component-page.css" />
   </head>
   <body>
     <!-- 카드 컴포넌트 -->
+    <h1>Card Components</h1>
+    <div class="light card-wrapper">
+      <div class="light-card-wrapper text-box">
+        <span class="title">제목</span>
+        <span class="subtitle">부제목</span>
+        <span class="sales-date">출시일</span>
+      </div>
 
+      <section class="light">
+        <button class="detail detail-light">
+          <span class="sr-only">상세 정보</span>
+          더 알아보기
+        </button>
+        <button class="price price-light">
+          <span class="sr-only">가격 보기</span>
+          가격 보기
+        </button>
+      </section>
+    </div>
+    <div class="dark card-wrapper">
+      <div class="dark-card-wrapper text-box">
+        <span class="title">제목</span>
+        <span class="subtitle">부제목</span>
+        <span class="sales-date">출시일</span>
+      </div>
+
+      <section class="dark">
+        <a href="/" class="detail">
+          <span class="sr-only">에 대해 더 알아보기</span>
+          <button class="detail detail-dark">
+          더 알아보기
+        </button>
+        </a>
+
+
+        <a href="/" class="price">
+          <span class="sr-only">의 가격 알아보기</span>
+          <button class="price price-dark">
+            가격 보기
+          </button>
+        </a>
+
+
+      </section>
+    </div>
+
+    <hr />
+    <!-- 버튼 컴포넌트 -->
+    <h1>Button Components</h1>
+    <div class="button-wrapper">
+      <section class="light">
+        <button class="detail detail-light">
+          <span class="sr-only">상세 정보</span>
+          더 알아보기
+        </button>
+        <button class="price price-light">
+          <span class="sr-only">가격 보기</span>
+          가격 보기
+        </button>
+      </section>
+
+      <section class="dark">
+        <button class="detail detail-dark">
+          <span class="sr-only">상세 정보</span>
+          더 알아보기
+        </button>
+        <button class="price price-dark">
+          <span class="sr-only">가격 보기</span>
+          가격 보기
+        </button>
+      </section>
+    </div>
   </body>
 </html>

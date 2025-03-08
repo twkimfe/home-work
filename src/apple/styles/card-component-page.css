@@ -2,6 +2,28 @@
 @import "./theme.css";
 @import "./base.css";
 
+/* component page */
+body {
+  margin: var(--small-spacing);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+hr {
+  width: 100%;
+}
+
+.card-wrapper,
+.button-wrapper {
+  display: flex;
+  box-sizing: border-box;
+  margin: var(--small-spacing);
+  padding: var(--base-spacing);
+  gap: var(--small-spacing);
+  border: 2px solid var(--blue-300);
+}
+
 /* card components */
 .card-wrapper {
   width: 320px;
@@ -21,9 +43,6 @@
 
   @media (min-width: 1024px) {
     width: 1024px;
-    & .text-box {
-      margin-top: var(--base-spacing);
-    }
   }
 }
 

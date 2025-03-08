@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -6,11 +6,92 @@
     <title>Apple Card Layout</title>
     <link rel="icon" href="./favicon/apple-favicon.svg" />
     <link rel="apple-touch-icon" href="./favicon/apple-favicon.svg" />
-    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles/apple.css" />
   </head>
   <body>
     <!-- 카드 레이아웃 -->
+    <h1 class="sr-only">애플 제품 홍보 페이지</h1>
+    <section class="container apple-products">
+      <figure class="container-ipad-pro">
+        <figcaption class="sr-only">애플 아이패드 프로</figcaption>
+        <div class="dark card-wrapper ipad-pro">
+          <div class="dark-card-wrapper text-box">
+            <span class="title">iPad Pro</span>
+            <span class="subtitle"
+              >놀라우리만치 얇다.<br />엄청나게 강력하다</span
+            >
+            <span class="sales-date">출시일 추후 공개</span>
+          </div>
+          <section class="dark">
+            <a href="/" class="detail-ipad-pro">
+              <button class="detail detail-dark">
+                <span class="sr-only"
+                  >애플 아이패드 프로에 대해 더 알아보기</span
+                >
+                더 알아보기
+              </button>
+            </a>
+            <a href="/" class="price-ipad-pro">
+              <button class="price price-dark">
+                <span class="sr-only">애플 아이패드 프로의 가격 알아보기</span>
+                가격 보기
+              </button>
+            </a>
+          </section>
+        </div>
+      </figure>
 
+      <figure class="container-ipad-air">
+        <figcaption class="sr-only">애플 아이패드 에어</figcaption>
+        <div class="light card-wrapper ipad-air">
+          <div class="light-card-wrapper text-box">
+            <span class="title">iPad Air</span>
+            <span class="subtitle"
+              >두 가지 사이즈. 더 빠른 칩.<br />무엇이든 거뜬하게.</span
+            >
+            <span class="sales-date">출시일 추후 공개</span>
+          </div>
+          <section class="light">
+            <a href="/" class="detail-ipad-air">
+              <button class="detail detail-light">
+                <span class="sr-only"
+                  >애플 아이패드 에어에 대해 더 알아보기</span
+                >
+                더 알아보기
+              </button>
+            </a>
+            <a href="/" class="price-ipad-air">
+              <button class="price price-light">
+                <span class="sr-only">애플 아이패드 에어의 가격 알아보기</span>
+                가격 보기
+              </button>
+            </a>
+          </section>
+        </div>
+      </figure>
+
+      <figure class="container-iphone15-pro">
+        <figcaption class="sr-only">애플 아이폰 15프로</figcaption>
+      </figure>
+
+      <div class="apple-base-products">
+        <figure>
+          <figcaption class="sr-only">애플 아이폰 15</figcaption>
+        </figure>
+        <figure>
+          <figcaption class="sr-only">애플 아이워치</figcaption>
+        </figure>
+        <figure>
+          <figcaption class="sr-only">애플 맥북 에어</figcaption>
+        </figure>
+        <figure>
+          <figcaption class="sr-only">애플 에어팟 프로</figcaption>
+        </figure>
+      </div>
+    </section>
   </body>
 </html>

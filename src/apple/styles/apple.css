@@ -1,3 +1,24 @@
 @import "./card-component.css";
+@import "../../common/a11y.css";
 
 /* 카드 레이아웃 */
+
+.card-wrapper {
+  background: green;
+  width: 100%;
+}
+
+.card-wrapper.ipad-pro {
+  background: url(../products/ipad_pro.jpeg) no-repeat center/cover;
+
+  @media (min-width: 1024px) {
+    background-image: url("../products/ipad_pro_wide.jpeg");
+  }
+}
+.card-wrapper.ipad-air {
+  background: url(../products/ipad_air.jpeg) no-repeat center/cover;
+
+  @media (min-width: 1024px) {
+    background-image: url("../products/ipad_air_wide.jpeg");
+  }
+}

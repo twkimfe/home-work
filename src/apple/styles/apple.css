@@ -2,9 +2,20 @@
 @import "./product-cards.css";
 @import "../../common/a11y.css";
 
+:root {
+  --bg-color: var(--white);
+
+  @media (prefers-color-scheme: dark) {
+    --bg-color: var(--black);
+  }
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
 /* 카드 레이아웃 */
 
 .card-wrapper {
-  background: green;
   width: 100%;
 }

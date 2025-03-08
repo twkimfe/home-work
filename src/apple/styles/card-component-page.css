@@ -4,11 +4,11 @@
 
 /* component page */
 body {
+  background-color: var(--gray);
   margin: var(--small-spacing);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 hr {
   width: 100%;
@@ -35,14 +35,17 @@ hr {
   & .text-box {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    width: 100%;
     margin-top: var(--large-spacing);
     gap: var(--small-spacing);
   }
 
   @media (min-width: 1024px) {
     width: 1024px;
+    & .text-box {
+      margin-top: var(--base-spacing);
+    }
   }
 }
 
@@ -80,47 +83,56 @@ hr {
   }
 }
 
-/* button components */
-button {
-  border-style: none;
+/* link button components */
+.btn-link {
+  color: initial;
+  display: inline-block;
   padding: var(--x-small-spacing);
+  white-space: nowrap;
 }
 
 .light,
 .dark {
   display: flex;
   gap: var(--base-spacing);
+}
 
-  .detail-light,
-  .price-light,
-  .detail-dark,
-  .price-dark {
-    font-size: var(--xx-small-text);
-    border-radius: 1.5rem;
+.light .detail-light,
+.light .price-light,
+.dark .detail-dark,
+.dark .price-dark {
+  font-size: var(--xx-small-text);
+  border-radius: 1.5rem;
+  padding: var(--x-small-spacing);
+  text-align: center;
+}
 
-    @media (min-width: 1024px) {
-      font-size: var(--x-small-text);
-    }
+@media (min-width: 1024px) {
+  .light .detail-light,
+  .light .price-light,
+  .dark .detail-dark,
+  .dark .price-dark {
+    font-size: var(--x-small-text);
   }
 }
 
-.detail-light {
+.light .detail-light {
   background-color: var(--black);
   color: var(--white);
 }
 
-.price-light {
+.light .price-light {
   background-color: transparent;
   color: var(--black);
   border: 1px solid var(--black);
 }
 
-.detail-dark {
+.dark .detail-dark {
   background-color: var(--blue-300);
   color: var(--white);
 }
 
-.price-dark {
+.dark .price-dark {
   background-color: transparent;
   color: var(--blue-300);
   border: 1px solid var(--blue-300);

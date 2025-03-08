@@ -1,8 +1,31 @@
+/* Light and Dark Mode Combined with Optimizations */
+:root {
+  --bg-color: #f5f5f5;
+  --card-bg: white;
+  --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  --border-color: #f0f0f0;
+  --text-primary: #333;
+  --text-secondary: #666;
+  --text-hover: #0077ff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    --border-color: #ffecb3;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --text-hover: #f9a825;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: "Noto Sans KR", sans-serif;
-  background-color: #f5f5f5;
+  background-color: var(--bg-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,9 +33,9 @@ body {
 }
 
 .profile-card {
-  background: white;
+  background: var(--card-bg);
   border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--card-shadow);
   padding: 2rem;
   width: 300px;
   text-align: center;
@@ -24,18 +47,20 @@ body {
   border-radius: 50%;
   margin-bottom: 1rem;
   object-fit: cover;
-  border: 5px solid #f0f0f0;
+  border: 5px solid var(--border-color);
 }
 
 .name {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #333;
+  color: var(--text-primary);
   margin: 0 0 1rem 0;
 }
 
-.bio {
-  color: #666;
+.bio,
+.link-intro,
+.html-css {
+  color: var(--text-secondary);
   line-height: 1.5;
   margin: 0;
 }
@@ -55,24 +80,36 @@ body {
   padding: 0;
   margin: 10px auto;
   width: fit-content;
+}
 
-  span {
-    margin-right: 1rem;
-    white-space: nowrap;
-  }
+.homework-links span {
+  margin-right: 1rem;
+  white-space: nowrap;
+  color: var(--text-primary);
+}
 
-  li {
-    display: flex;
-    align-items: center;
-  }
-  ul {
-    display: flex;
-    gap: 1rem;
-  }
+.homework-links li {
+  display: flex;
+  align-items: center;
+}
+.homework-links li a {
+  text-decoration: none;
+  color: var(--text-primary); /* 링크 색상도 일관되게 유지 */
+}
+
+/* 마우스 오버 시 스타일을 추가하고 싶다면 */
+.homework-links li a:hover {
+  color: var(--text-hover); /* 원하는 색상으로 변경 가능 */
+}
+
+.homework-links ul {
+  display: flex;
+  gap: 1rem;
 }
 
 .homework-item {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  color: var(--text-primary);
 }

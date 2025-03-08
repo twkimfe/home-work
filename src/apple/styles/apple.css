@@ -14,8 +14,12 @@ body {
   background-color: var(--bg-color);
 }
 
-/* 카드 레이아웃 */
-
-.card-wrapper {
-  width: 100%;
+@media (min-width: 1024px) {
+  .apple-base-products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
+/* 카드 레이아웃 */
+/* 해당 css 코드는 product-cards.css에 작성했습니다 */

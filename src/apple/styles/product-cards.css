@@ -1,3 +1,7 @@
+.card-wrapper {
+  width: 100%;
+}
+
 .card-wrapper.ipad-pro {
   background: url(../products/ipad_pro.jpeg) no-repeat center/cover;
 
